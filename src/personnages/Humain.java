@@ -28,7 +28,7 @@ public class Humain {
 	}
 	
 	public String direBonjour() {
-		return "Bonjour ! Je m'appelle " + nom + " et j'aime boire du " + boissonfavorite;
+		return getNom()+ " - " + "Bonjour ! Je m'appelle " + nom + " et j'aime boire du " + boissonfavorite;
 	}
 	
 	public String boire() {
@@ -37,24 +37,24 @@ public class Humain {
 	
 	public void acheter(String bien, int prix) {
 		if(getSonargent()>=prix) {
-			System.out.println("J'ai " + sonargent + " sous en poche. Je vais pouvoir m'acheter " + bien
+			System.out.println(getNom()+ " - " + "J'ai " + sonargent + " sous en poche. Je vais pouvoir m'acheter " + bien
 					+ " à " + prix + " sous " );
 			sonargent=sonargent-prix;
 		}
 		else {
-			System.out.println(" Je n'ai plus que " + sonargent + " sous en poche. Je ne peux même pas m'offrir "
+			System.out.println(getNom()+ " - " + " Je n'ai plus que " + sonargent + " sous en poche. Je ne peux même pas m'offrir "
 					+ " un " + bien + " à " + prix + " sous ");
 		}
 	}
 	
 	public void gagnerArgent(int gain) {
 		sonargent=sonargent+gain;
-		System.out.println("Je viens de gagner " + gain + "argent, "+ " mon argent est de : " + sonargent);
+		System.out.println(getNom()+ " - " + "Je viens de gagner " + gain + "argent, "+ " mon argent est de : " + sonargent);
 	}
 	
 	public void perdreArgent(int perte) {
 		sonargent=sonargent-perte;
-		System.out.println(" Je viens de perdre " + perte + " argent, " + " mon argent est de : " + sonargent);
+		System.out.println(getNom()+ " - " + " Je viens de perdre " + perte + " argent, " + " mon argent est de : " + sonargent);
 	}
 	
 }

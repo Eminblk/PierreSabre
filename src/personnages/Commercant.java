@@ -11,15 +11,16 @@ public class Commercant extends Humain{
 	}
 	
 	public int seFaireExtorquer() {
-		System.out.println("J'ai tout perdu le monde est trop injuste");
-		return sonargent=0;
+		perdreArgent(sonargent);
+		System.out.println(getNom()+ " - " + "J'ai tout perdu le monde est trop injuste");
+		return sonargent;
 		
 	}
 	
 	
 	public void recevoir(int argent) {
-		sonargent=sonargent+argent;
-		System.out.println(argent + " sous " + " ! Je te remercie généreux donateur! ");
+		gagnerArgent(argent);
+		System.out.println(getNom()+ " - " + argent + " sous " + " ! Je te remercie généreux donateur! ");
 	}
 	
 	
