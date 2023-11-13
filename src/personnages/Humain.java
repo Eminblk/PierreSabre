@@ -35,9 +35,26 @@ public class Humain {
 		return " Mmmm, un bon verre de " + boissonfavorite + " GLOUPS ! ";
 	}
 	
-	public void acheter(String bien, int prix) {}
+	public void acheter(String bien, int prix) {
+		if(getSonargent()>=prix) {
+			System.out.println("J'ai " + sonargent + " sous en poche. Je vais pouvoir m'acheter " + bien
+					+ " à " + prix + " sous " );
+			sonargent=sonargent-prix;
+		}
+		else {
+			System.out.println(" Je n'ai plus que " + sonargent + " sous en poche. Je ne peux même pas m'offrir "
+					+ " un " + bien + " à " + prix + " sous ");
+		}
+	}
 	
-	public void gagnerArgent(int gain) {}
+	public void gagnerArgent(int gain) {
+		sonargent=sonargent+gain;
+		System.out.println("Je viens de gagner " + gain + "argent, "+ " mon argent est de : " + sonargent);
+	}
 	
-	public void perdreArgent(int perte) {}
+	public void perdreArgent(int perte) {
+		sonargent=sonargent-perte;
+		System.out.println(" Je viens de perdre " + perte + " argent, " + " mon argent est de : " + sonargent);
+	}
+	
 }
